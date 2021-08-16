@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Dependencies
+Styled Components
+React Icons
+	npm install react-icons --save
+React router dom
+react scroll
+
 ## Available Scripts
 
 In the project directory, you can run:
