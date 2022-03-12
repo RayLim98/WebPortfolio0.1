@@ -4,21 +4,21 @@ import Home from './Views/Main/Home'
 import Project from './Views/Main/About'
 import Contact from './Views/Main/Contact'
 import HorizontalNavBar from './Components/NavBar/HorizontalNavBar';
+import { ThemeProvider } from './Context/ThemeContext'
 function App() {
   return (
     // Mermaid Lagoon
     // Tealeave Green
     // Window Tide
     // ON CANVA
+    <ThemeProvider>
       <Router>
         <Home/>
         <HorizontalNavBar/>
         <Project/>
         <Contact/>
-        {/* <div id='contact'>
-
-        </div> */}
       </Router>
+    </ThemeProvider>
   );
 }
 

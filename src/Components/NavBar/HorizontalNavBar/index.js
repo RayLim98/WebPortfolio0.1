@@ -3,9 +3,11 @@ import { StickyContainer } from './style'
 import { HoriUl} from '../../List'
 import {Item, NavItem} from './style'
 
+export const horiNavHeight = 8;
+
 const HorizontalNavBar = () => {
 	return (
-		<StickyContainer>
+		<StickyContainer height = {horiNavHeight}>
 			<HoriUl>
 				<Item>
 					<NavItem to="home" smooth={true} spy={true} duration={500}>Home</NavItem>

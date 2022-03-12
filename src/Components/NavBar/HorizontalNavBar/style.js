@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
@@ -8,7 +9,8 @@ export const StickyContainer = styled.div`
 	position: sticky;
 	top: 0;
 	width: 100%;
-	height: 5vh;
+	height: ${props => props.height || 10}vh;
+	max-height: 150px;
 `
 // export const NavCon = styled.div`
 // 	align-self: center;
@@ -24,6 +26,7 @@ export const StickyContainer = styled.div`
 export const NavItem = styled(LinkS)`
 	flex:1;
 	height: 100%;
+	font-size: 1.5rem;
 	margin-left: 20%;
 	margin-right: 20%;
 	display: flex;
