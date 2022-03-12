@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-const HeadingText = styled.h1`
+const ExLargeText = styled.h2`
   color: ${props => props.color || 'white'};
-  font-size: 3rem;
+  font-size: 1.5rem;
 `
 
-export default HeadingText
+export default ExLargeText

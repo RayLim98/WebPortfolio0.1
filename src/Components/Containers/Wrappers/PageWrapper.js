@@ -5,7 +5,8 @@ const PageWrapper = styled.section`
     height: 20vh;
     width: 100%;
     min-height: ${props => props.height || 100}vh;
-    padding: 4vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
     padding-top: 8vh;
 
 `
