@@ -1,27 +1,33 @@
-import React from 'react'
 import PageWrapper from '../../Components/Containers/Wrappers/PageWrapper'
 import HeadingText from '../../Components/TextStyles/HeadingText'
 import { horiNavHeight } from '../../Components/NavBar/HorizontalNavBar'
 import { useTheme } from '../../Context/ThemeContext'
-import ContentWrapper from '../../Components/Containers/Wrappers/ContentWrapper'
+import { FlexDiv } from '../../Components/Containers/Wrappers/style'
 
 const Home = () => {
 	const { theme } = useTheme()
 	return ( 
-		<PageWrapper id="home" height = {100 - horiNavHeight} backgroundColor = { theme.primary }>
-			<ContentWrapper column>
+		<PageWrapper 
+			id="home" 
+			height = {100 - horiNavHeight} 
+			backgroundColor = { theme.primary }
+			style={{flexDirection: 'column'}}
+		>
+			<FlexDiv flex={2}>
+				<FlexDiv>
+					<HeadingText>
+						Hello and welcome
+					</HeadingText>
+				</FlexDiv>
+				<FlexDiv>
+					image
+				</FlexDiv>
+			</FlexDiv>
+			<FlexDiv style={{flexDirection: 'column-reverse', alignItems: 'center',}}>
 				<HeadingText>
-					Hello
+					Raymond Lim
 				</HeadingText>
-				<HeadingText>
-					&
-				</HeadingText>
-				<HeadingText>
-					Welcome
-				</HeadingText>
-			</ContentWrapper>
-			<ContentWrapper column>
-			</ContentWrapper>
+			</FlexDiv>
 		</PageWrapper>
 	)
 }

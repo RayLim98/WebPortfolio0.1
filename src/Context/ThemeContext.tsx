@@ -55,10 +55,10 @@ const ThemeProvider = ({children}: {children: React.ReactNode}) => {
 }
 
 const useTheme = () => {
-    const theme = useContext(Context)
-      if (theme == null) {
-        throw new Error("useTheme used outside of Provider");
-  }
+  const theme = useContext(Context)
+    if (theme == null) {
+      throw new Error("useTheme used outside of Provider");
+    }
   return theme
 }
 
