@@ -1,19 +1,36 @@
 import React, { useContext, useState } from 'react'
 
-export const themes = {
+interface ThemeItemsProps {
+  primary: string
+  secondary?: string
+  textPrimary: string
+}
+
+interface ThemeProps { 
+  light: ThemeItemsProps
+  dark: ThemeItemsProps
+}
+
+interface ContextProps {
+  theme: ThemeItemsProps
+  toggleTheme: () => void 
+  isLightTheme: () => boolean
+}
+
+export const themes: ThemeProps = {
     light: {
         primary: '#267cb5',
-        textprimary: 'white'
+        textPrimary: 'white'
     },
     dark: {
         primary: '#000000',
-        textprimary: 'red'
+        textPrimary: 'red'
     },
 }
 
-const Context = React.createContext(null);
+const Context = React.createContext<ContextProps | null>(null);
 
-const ThemeProvider = ({children}) => {
+const ThemeProvider = ({children}: {children: React.ReactNode}) => {
   const [lightTheme, setLightTheme] = useState(true)
 
   const toggleTheme = () => {

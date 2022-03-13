@@ -8,7 +8,7 @@ import ContentWrapper from '../../Components/Containers/Wrappers/ContentWrapper'
 const Home = () => {
 	const { theme } = useTheme()
 	return ( 
-		<PageWrapper id="home" height = {100 - horiNavHeight} backgroundColor = {theme.primary}>
+		<PageWrapper id="home" height = {100 - horiNavHeight} backgroundColor = { theme.primary }>
 			<ContentWrapper column>
 				<HeadingText>
 					Hello
