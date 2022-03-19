@@ -4,6 +4,8 @@ interface ThemeItemsProps {
   primary: string
   secondary?: string
   textPrimary: string
+  textSecondary: string
+  highLight: string
 }
 
 interface ThemeProps { 
@@ -20,11 +22,17 @@ interface ContextProps {
 export const themes: ThemeProps = {
     light: {
         primary: '#267cb5',
-        textPrimary: 'white'
+        secondary: 'white',
+        textPrimary: 'white',
+        textSecondary: 'black',
+        highLight: '#219f97',
     },
     dark: {
         primary: '#000000',
-        textPrimary: 'red'
+        secondary: '#880707',
+        textPrimary: 'red',
+        textSecondary: 'white',
+        highLight: '#3d0101' 
     },
 }
 

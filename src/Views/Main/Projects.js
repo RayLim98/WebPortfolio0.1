@@ -2,15 +2,15 @@ import { useTheme } from '../../Context/ThemeContext'
 import PageWrapper from '../../Components/Containers/Wrappers/PageWrapper';
 import HeadingText from '../../Components/TextStyles/HeadingText';
 
-const About = () => {
+const Projects = () => {
 	const { theme } = useTheme();
 	return ( 
-		<PageWrapper id="about" backgroundColor={theme.primary}>
+		<PageWrapper id="project" backgroundColor={theme.primary}>
 			<HeadingText>
-				About
+				Projects
 			</HeadingText>
 		</PageWrapper>
 	 )
 }
 
-export default About
+export default Projects

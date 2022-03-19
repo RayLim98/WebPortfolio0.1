@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { useTheme } from '../../Context/ThemeContext'
-import { headingText } from './textconstants'
+import { headingText, transition} from './textconstants'
 
 const StyledH1 = styled.h1`
   color: ${props => props.color || 'white'};
-  /* text-align: center; */
   font-size: ${headingText}rem;
+  transition: color ease-in ${transition}s;
 `
 
 const HeadingText = ({children}) => {

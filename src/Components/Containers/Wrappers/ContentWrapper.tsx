@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { midground_z } from '../zIndex'
 
 interface FlexDivProps {
     flex: number

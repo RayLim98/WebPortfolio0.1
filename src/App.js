@@ -1,10 +1,14 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ThemeProvider } from './Context/ThemeContext'
+
 import Home from './Views/Main/Home'
-import Project from './Views/Main/About'
+import About from './Views/Main/About'
 import Contact from './Views/Main/Contact'
 import HorizontalNavBar from './Components/NavBar/HorizontalNavBar';
-import { ThemeProvider } from './Context/ThemeContext'
+import Projects from './Views/Main/Projects';
+
+
 function App() {
   return (
     // Mermaid Lagoon
@@ -15,7 +19,8 @@ function App() {
       <Router>
         <Home/>
         <HorizontalNavBar/>
-        <Project/>
+        <About/>
+        <Projects/>
         <Contact/>
       </Router>
     </ThemeProvider>

@@ -12,6 +12,7 @@ export const FlexDiv = styled.div<FlexDivProps>`
     display: flex;
     flex: ${props => props.flex? props.flex: 1};
     flex-wrap: wrap;
+    z-index: 10;
 	@media screen and (max-width: 768px) {
         flex-direction: column;
 	}

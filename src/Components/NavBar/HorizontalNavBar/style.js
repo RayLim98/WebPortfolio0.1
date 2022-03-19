@@ -5,12 +5,14 @@ import { Link as LinkS } from 'react-scroll'
 
 export const StickyContainer = styled.div`
 	background-color: white;
+	background-color: ${props => props.bgColor || 'green'};
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	width: 100%;
 	height: ${props => props.height || 10}vh;
 	max-height: 150px;
+	z-index: 999;
 `
 // export const NavCon = styled.div`
 // 	align-self: center;
@@ -32,16 +34,10 @@ export const NavItem = styled(LinkS)`
 	display: flex;
 	align-items: inherit;
 	justify-content: inherit;
-	:hover {
-		cursor: pointer;
-		transition: background-color 1s ease-out;
-		background-color: #219F97;
-	}
+	cursor: pointer;
 	&.active {
-		/* border-bottom: 3px solid #01bf71; */
 		transition: 0.5s all ease;
-		color: white;
-		background-color: #219F97;
+		background-color: ${props => props.highLightColor || '#219F97'};
 	}
 `
 
@@ -162,9 +158,9 @@ export const NavBtnLink = styled(LinkR)`
 	cursor: pointer;
 	text-decoration: none;
 
-	&:hover {
+	/* &:hover {
 		transition: all 1s ease-in-out;
 		background: #fff;
 		color: #010606;
-	}
+	} */
 `;

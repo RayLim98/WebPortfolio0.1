@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { midground_z } from '../zIndex'
 
 interface PageWrapperProps {
     column: boolean
@@ -16,6 +17,8 @@ const PageWrapper = styled.section<PageWrapperProps>`
     padding-right: 10vw;
     padding-bottom: 10vh;
     padding-top: 8vh;
+    z-index: ${10};
+    transition: background-color 1s ease-in;
 
     // add changes when browswer is 768 or less
 	@media screen and (max-width: 768px) {
