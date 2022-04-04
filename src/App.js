@@ -1,12 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { ThemeProvider } from './Context/ThemeContext'
+import { ThemeProvider, themes, useTheme } from './Context/ThemeContext'
 
 import Home from './Views/Main/Home'
 import About from './Views/Main/About'
 import Contact from './Views/Main/Contact'
 import HorizontalNavBar from './Components/NavBar/HorizontalNavBar';
 import Projects from './Views/Main/Projects';
+import BackGroundCarou from './Components/Carousel/BackGroundCarou';
 
 
 function App() {
@@ -17,11 +18,18 @@ function App() {
     // ON CANVA
     <ThemeProvider>
       <Router>
-        <Home/>
+        <BackGroundCarou>
+          <Home/>
+          <HorizontalNavBar/>
+          <About/>
+          <Projects/>
+          <Contact/>
+        </BackGroundCarou>
+        {/* <Home/>
         <HorizontalNavBar/>
         <About/>
         <Projects/>
-        <Contact/>
+        <Contact/> */}
       </Router>
     </ThemeProvider>
   );

@@ -41,7 +41,7 @@ const HorizontalNavBar = () => {
 				</li>
 				{
 					navItems.map((item)=> 
-					<Item>
+					<Item key={item.navId}>
 						<NavItem 
 							to={item.navId}
 							smooth={true} 
@@ -59,5 +59,5 @@ const HorizontalNavBar = () => {
 		</StickyContainer>
 	)
 }
-// rafce
+
 export default HorizontalNavBar

@@ -10,6 +10,7 @@ export const StickyContainer = styled.div`
 	position: sticky;
 	top: 0;
 	width: 100%;
+	/* min-height: 4vh; */
 	height: ${props => props.height || 10}vh;
 	max-height: 150px;
 	z-index: 999;
