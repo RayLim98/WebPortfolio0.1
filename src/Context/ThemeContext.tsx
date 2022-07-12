@@ -39,6 +39,9 @@ export const themes: ThemeProps = {
 const Context = React.createContext<ContextProps | null>(null);
 
 const ThemeProvider = ({children}: {children: React.ReactNode}) => {
+  /**
+   * @description Providers theme functionality and control to the rest of the document
+   */
   const [lightTheme, setLightTheme] = useState(true)
 
   const toggleTheme = () => {

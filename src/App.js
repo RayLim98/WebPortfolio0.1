@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider, themes, useTheme } from './Context/ThemeContext'
+import { DocProvider } from './Context/DocContext'
 
 import Home from './Views/Main/Home'
 import About from './Views/Main/About'
@@ -16,22 +17,19 @@ function App() {
     // Tealeave Green
     // Window Tide
     // ON CANVA
-    <ThemeProvider>
-      <Router>
-        <BackGroundCarou>
-          <Home/>
-          <HorizontalNavBar/>
-          <About/>
-          <Projects/>
-          <Contact/>
-        </BackGroundCarou>
-        {/* <Home/>
-        <HorizontalNavBar/>
-        <About/>
-        <Projects/>
-        <Contact/> */}
-      </Router>
-    </ThemeProvider>
+    <DocProvider>
+      <ThemeProvider>
+        <Router>
+          <BackGroundCarou>
+            <Home id = {'home'}/>
+            <HorizontalNavBar/>
+            <About/>
+            <Projects/>
+            <Contact/>
+          </BackGroundCarou>
+        </Router>
+      </ThemeProvider>
+    </DocProvider>
   );
 }
 

@@ -4,13 +4,12 @@ import { horiNavHeight } from '../../Components/NavBar/HorizontalNavBar'
 import { useTheme } from '../../Context/ThemeContext'
 import { FlexDiv } from '../../Components/Containers/Wrappers/style'
 
-const Home = () => {
+const Home = ({id}) => {
 	const { theme } = useTheme()
 	return ( 
 		<PageWrapper 
-			id="home" 
+			id= {id}
 			height = {100 - horiNavHeight} 
-			backgroundColor = { theme.primary }
 			style={{flexDirection: 'column'}}
 		>
 			<FlexDiv flex={2}>
@@ -23,7 +22,7 @@ const Home = () => {
 					image
 				</FlexDiv>
 			</FlexDiv>
-			<FlexDiv style={{flexDirection: 'column-reverse', alignItems: 'center',}}>
+			<FlexDiv style={{flexDirection: "column-reverse", alignItems: 'center',}}>
 				<HeadingText>
 					Raymond Lim
 				</HeadingText>

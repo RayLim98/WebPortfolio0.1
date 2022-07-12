@@ -11,18 +11,18 @@ const titleNames = [
     "Contact",
 ]
 
-interface BgProps {
+interface ChildrenProps {
   backgroundColor: string
 }
 
-const Bg = styled.div<BgProps>`
+const Bg = styled.div`
   height: 100vh;
   min-height: 100vh;
-  background-color: ${props=> props.backgroundColor || 'green'};
 `
 const Carousel = styled.div`
-  position: fixed;
   display: flex;
+  flex: 1;
+  position: fixed;
   align-items: center;
   width: 100%; 
   height: 100vh;
@@ -33,10 +33,10 @@ const CarouselItem = styled.li`
   display: flex;
   color: white;
   position: relative;
-  bottom: 20%;
   flex-direction: column-reverse;
   align-items: flex-end;
   flex: 1;
+  bottom: 20%;
   min-width: 100%;
   height: 80vh;
   padding: 4vh;
@@ -44,8 +44,17 @@ const CarouselItem = styled.li`
   opacity: 0.5;
 `
 
+const ChildrenContainer = styled.section<ChildrenProps>`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: ${props=>props.backgroundColor || 'green'};
+`
 
 const BackGroundCarou = ({children, bgColor}: {children: any, bgColor: any}) => {
+  /**
+   * @description Paginating background for aesthetic purposes
+   */
   const { theme } = useTheme()
   const [y, setY] = useState(0);
   const handleScroll = () => setY(interpolateScroll());
@@ -63,19 +72,19 @@ const BackGroundCarou = ({children, bgColor}: {children: any, bgColor: any}) => 
   const interpolateScroll = () =>  (window.scrollY/window.innerHeight) * 100;
 
   return (
-    <Bg backgroundColor={theme.primary}>
+    <Bg>
       <Carousel>
-        {
-          titleNames.map((item, index) => 
-            <CarouselItem style={{transform: `translateX(-${y}%)`, transition: 'transform ease-in'}} key={item}>
-              {item}
-            </CarouselItem>
-          )
-        }
+          {
+            titleNames.map((item, index) => 
+              <CarouselItem style={{transform: `translateX(-${y}%)`, transition: 'transform ease-in'}} key={item}>
+                {item}
+              </CarouselItem>
+            )
+          }
       </Carousel>
-      <section>
+      <ChildrenContainer backgroundColor={theme.primary}>
         {children}
-      </section>
+      </ChildrenContainer>
     </Bg>
   )
 }

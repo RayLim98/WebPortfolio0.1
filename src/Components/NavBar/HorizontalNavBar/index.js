@@ -1,4 +1,3 @@
-import React from 'react'
 import { StickyContainer } from './style'
 import { useTheme } from '../../../Context/ThemeContext';
 import { HoriUl } from '../../List'
