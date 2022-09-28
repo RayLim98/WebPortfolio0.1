@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import PageText from '../TextStyles/PageText'
 import styled from 'styled-components'
-import { FaWindows } from 'react-icons/fa'
 import { useTheme } from '../../Context/ThemeContext'
 
 const titleNames = [
@@ -30,6 +28,7 @@ const Carousel = styled.div`
   margin: 0;
 `
 const CarouselItem = styled.li`
+  z-index: -1;
   display: flex;
   color: white;
   position: relative;

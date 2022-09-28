@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import LargeText from '../../TextStyles/LargeText'
 
 interface CarouselWrapperInterface {
   bgColor: string
@@ -27,7 +28,7 @@ const CarouselItem = ({
   const handleFlex = () => state? 30 : 1;
   const handleMouseEnter = () => setState(true) 
   const handleMouseLeave = () => setState(false)
-
+  
   return (
     <CarouselWrapperStyle 
       flex={handleFlex()}
@@ -35,7 +36,9 @@ const CarouselItem = ({
       onMouseEnter={()=> handleMouseEnter()}
       onMouseLeave={()=> handleMouseLeave()}
     >
-      {title}
+      <LargeText secondary={false}>
+        {title}
+      </LargeText>
     </CarouselWrapperStyle>
   )
 }

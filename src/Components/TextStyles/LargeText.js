@@ -11,7 +11,7 @@ const StyledH3 = styled.h3`
 const LargeText = ({children, secondary}) => {
   const { theme } = useTheme()
   return (
-    <StyledH3 color = { secondary? theme.textSecondary : theme.textPrimary }>
+    <StyledH3 color = { !secondary? theme.textPrimary :theme.textSecondary }>
       {children}
     </StyledH3>
   )
